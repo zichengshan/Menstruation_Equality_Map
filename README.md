@@ -1,1 +1,1 @@
-# Menstruation_Equality_Map
+# Menstruation_Equity_Map
