@@ -1,11 +1,10 @@
-
 * {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 10px 5px 0px 10px;
-  font-family:'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .react-icons {
@@ -54,7 +53,9 @@ body{
   margin-left: 15px;
 }
 
-.item--header, .item--text, .item--distance {
+.item--header,
+.item--text,
+.item--distance {
   margin: 0;
 }
 
@@ -84,9 +85,7 @@ body{
   section
 */
 
-.section {
-  display: flex;
-}
+
 
 
 /*
@@ -99,7 +98,10 @@ body{
   height: 92vh;
 }
 
-
+@media only screen and (min-width:750px) {
+  .section {
+    display: flex;
+  }
+}
 
 /* style={{ height: '50vh', width: '100%' }} */
-
