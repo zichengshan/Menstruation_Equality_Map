@@ -4,29 +4,8 @@ import markerIcon from './markerIcon.png'
 import userIcon from './userIcon.png'
 import { useGeolocated } from "react-geolocated";
 
-// const data = [
-//   {
-//     key: '1',
-//     name: 'John Brown',
-//     age: 32,
-//     address: 'New York No. 1 Lake Park',
-//     tags: ['nice', 'developer'],
-//   },
-//   {
-//     key: '2',
-//     name: 'Jim Green',
-//     age: 42,
-//     address: 'London No. 1 Lake Park',
-//     tags: ['loser'],
-//   },
-//   {
-//     key: '3',
-//     name: 'Joe Black',
-//     age: 32,
-//     address: 'Sidney No. 1 Lake Park',
-//     tags: ['cool', 'teacher'],
-//   },
-// ];
+
+
 const RestroomMarker = ({ text }) => (
   <div>
   <div style={{
@@ -74,7 +53,32 @@ function displayInfo() {
 }
 
 function Map() {
-  
+  const locationData = [
+    {
+      key: '1',
+      lat: 33.646813,
+      lng: -117.842527,
+      text: "Aldrich Park"
+      
+    },
+    {
+      key: '2',
+      lat: 33.646393,
+      lng: -117.839737,
+      text: "SSL"
+    },
+    {
+      key: '3',
+      lat: 33.646027,
+      lng: -117.845745,
+      text: "xxx"
+    },
+  ];
+  const restrooms = locationData.map(d => <RestroomMarker
+    lat={d.lat}
+    lng={d.lng}
+    text={d.text}
+  />);
   const defaultProps = {
     center: {
       lat: 33.646813,
@@ -113,21 +117,8 @@ function Map() {
         <div>Getting the location data&hellip; </div>
     )
     }
-        <RestroomMarker
-          lat={33.646813}
-          lng={-117.842527}
-          text="Aldrich Park"
-        />
-        <RestroomMarker
-          lat={33.646393}
-          lng={-117.839737}
-          text="SSL"
-        />
-        <RestroomMarker
-          lat={33.646027}
-          lng={-117.845745}
-          text=""
-        />
+        
+       {restrooms}
       </GoogleMapReact>
     </div>
   );
