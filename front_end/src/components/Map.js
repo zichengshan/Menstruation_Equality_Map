@@ -4,8 +4,6 @@ import markerIcon from './markerIcon.png'
 import userIcon from './userIcon.png'
 import { useGeolocated } from "react-geolocated";
 
-
-
 const RestroomMarker = ({ text }) => (
   <div>
   <div style={{
@@ -25,7 +23,8 @@ const RestroomMarker = ({ text }) => (
   </div>
   {/* <Table style={{color:"white"}} columns={columns} dataSource={data} onChange={onChange} pagination={false}/> */}
   </div>
-);
+)
+
 const UserMarker = ({ text }) => (
   <div>
   <div style={{
@@ -46,7 +45,6 @@ const UserMarker = ({ text }) => (
   {/* <Table style={{color:"white"}} columns={columns} dataSource={data} onChange={onChange} pagination={false}/> */}
   </div>
 );
-
 
 function displayInfo() {
   console.log("aaaa")
@@ -73,12 +71,14 @@ function Map() {
       lng: -117.845745,
       text: "xxx"
     },
-  ];
+  ]
   const restrooms = locationData.map(d => <RestroomMarker
+    key={d.key}
     lat={d.lat}
     lng={d.lng}
     text={d.text}
   />);
+
   const defaultProps = {
     center: {
       lat: 33.646813,
@@ -86,6 +86,7 @@ function Map() {
     },
     zoom: 16
   };
+
   const { coords, isGeolocationAvailable, isGeolocationEnabled } =
   useGeolocated({
       positionOptions: {
@@ -95,7 +96,6 @@ function Map() {
   });
   return (
     // Important! Always set the container height explicitly
-    
     
     <div className="map">
       <GoogleMapReact
