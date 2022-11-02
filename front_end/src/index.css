@@ -5,6 +5,11 @@
 body {
   margin: 10px 5px 0px 10px;
   font-family: 'Poppins', sans-serif;
+  background-color: white
+}
+
+h1,h2,h3,h4,p {
+  margin: 0;
 }
 
 .react-icons {
@@ -14,6 +19,12 @@ body {
 /* 
   Navbar 
 */
+
+.nav--title {
+  font-size: 2rem;
+  color: #FF7E07;
+  text-shadow: 1px 2px 1px #474747;
+}
 
 .nav--select {
   min-width: 300px;
@@ -119,4 +130,55 @@ body {
   }
 }
 
-/* style={{ height: '50vh', width: '100%' }} */
+/* Popup */
+
+.pop {
+  padding: 10px;
+}
+
+.pop--title {
+  display: flex;
+  align-items: center;
+
+}
+
+.pop--buildingName {
+  margin-left: 15px;
+  margin-bottom: -6px;
+  color: orange;
+}
+
+.pop--distance {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.pop--close {
+  margin-left: auto;
+}
+
+.pop--floor {
+  padding: 0 2em;
+  margin: .8em;
+  border: 2px solid #F0F2F5;
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 10px;
+}
+
+.pop--floorName {
+  margin-top: -20px;
+  color:purple;
+}
+
+.pop--available {
+  margin-bottom: 4px;
+}
+
+a {
+  color: grey;
+  text-decoration: none; 
+}
+
+a:hover {
+  color: orangered
+}
