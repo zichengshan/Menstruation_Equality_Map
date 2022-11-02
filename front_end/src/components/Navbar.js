@@ -4,7 +4,8 @@ import Search from "./Search"
 function Navbar(){
     return (
         <div className="nav">
-            <Search />
+            {/* <Search /> */}
+            <h1 className="nav--title">Menstruation Equity Map ✨</h1>
         </div>
         
     )
