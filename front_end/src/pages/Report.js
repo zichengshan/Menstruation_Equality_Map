@@ -45,15 +45,14 @@ function Report() {
             onFinishFailed={onFinishFailed}
             autoComplete="off"
           >
-            <Form.Item label="Comment" name="Comment" >
-              {/* <Input placeholder="You can leave some comments here" /> */}
+            <Form.Item label="Comment" name="Comment">
               <TextArea
                 showCount
                 maxLength={400}
                 rows={7}
                 className="comments"
                 onChange={onChange}
-                placeholder="You can leave some comments here"
+                placeholder="You can leave some comments here (max 400 characters)"
               />
             </Form.Item>
 

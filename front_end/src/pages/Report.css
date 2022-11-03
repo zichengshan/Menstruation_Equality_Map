@@ -1,6 +1,9 @@
 .Report{
-    
+    text-align: center;
 }
 .Header{
-    text-align: center;
+    
+}
+restroom_title{
+    width: 100px;
 }
