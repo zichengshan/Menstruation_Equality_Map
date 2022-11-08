@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import React from "react";
 import { Layout, Button, Form, Input } from "antd";
 import "./Report.css"
@@ -21,13 +20,19 @@ function Report() {
     console.log("Failed:", errorInfo);
   };
   return (
-    <div className="Report">
-      <Layout>
+      <Layout style={{
+        height:"100vh"
+      }}>
         <Header className="Header">
-          <Navbar />
+          <h1 style={{
+            color:"white",
+            textAlign:"center"
+          }}>
+            Report Page
+            </h1>
         </Header>
-        <Content>
-          <span>
+        <Content style={{textAlign:"center"}}>
+          <span >
             {restroomInfo.building_name} - floor: {restroomInfo.floor_name}
           </span>
           <Form
@@ -45,7 +50,7 @@ function Report() {
             onFinishFailed={onFinishFailed}
             autoComplete="off"
           >
-            <Form.Item label="Comment" name="Comment">
+            <Form.Item name="Comment">
               <TextArea
                 showCount
                 maxLength={400}
@@ -53,6 +58,13 @@ function Report() {
                 className="comments"
                 onChange={onChange}
                 placeholder="You can leave some comments here (max 400 characters)"
+            
+                style={{
+                    width:"80%",
+                    margin:"0 auto",
+                    resize:"horizontal",
+                    left:"10px"
+                }}
               />
             </Form.Item>
 
@@ -60,8 +72,7 @@ function Report() {
 
             <Form.Item
               wrapperCol={{
-                offset: 8,
-                span: 16,
+                
               }}
             >
               <Button type="primary" htmlType="submit">
@@ -71,7 +82,6 @@ function Report() {
           </Form>
         </Content>
       </Layout>
-    </div>
   );
 }
 export default Report;

@@ -1,9 +1,8 @@
+@import '~antd/dist/antd.css';
+
 .Report{
-    text-align: center;
+    display:flex;
+	justify-content:center;
 }
 .Header{
-    
-}
-restroom_title{
-    width: 100px;
 }
