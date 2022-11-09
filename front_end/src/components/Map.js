@@ -4,7 +4,7 @@ import markerIcon from './markerIcon.png'
 import userIcon from './userIcon.png'
 import {useGeolocated} from "react-geolocated"
 import ControlledPopup from "./ControlledPopup"
-
+import { searchBuilding } from '../request/api'
 const RestroomMarker = ({key, text, open, setOpen, closeModal}) => (
     <div>
         <div style={{
