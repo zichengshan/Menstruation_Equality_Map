@@ -1,0 +1,21 @@
+.Header {
+    text-align: center;
+    background-color: rgb(25, 18, 18);
+    height: 50px;
+}
+
+.position {
+    text-align: center;
+}
+
+.qrcode--position {
+    background-position: center;
+    background-attachment: fixed;
+    width: 350px;
+    margin-top: 50px;
+}
+
+.qrcode--report {
+    width: 100px;
+    margin-top: 100px;
+}

@@ -1,0 +1,20 @@
+.Header {
+    text-align: center;
+    background-color: rgb(25, 18, 18);
+    height: 50px;
+}
+
+.text--generation {
+    margin-left: 100px !important;
+    text-align: center;
+    position: relative;
+    left: 30%;
+}
+
+.Cascader {
+    margin-top: 100px;
+    width: 400px !important;
+    text-align: center;
+    position: relative;
+    left: 30%;
+}
