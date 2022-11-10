@@ -14,7 +14,7 @@ function App() {
     const {coords, isGeolocationAvailable, isGeolocationEnabled} =
         useGeolocated({
             positionOptions: {
-                enableHighAccuracy: true,
+                enableHighAccuracy: false,
             },
             userDecisionTimeout: 5000,
         })
@@ -23,16 +23,26 @@ function App() {
 
     }, []);
     const getBuildingList = () => {
-        searchBuilding({
-            "latitude" : coords.latitude,
-            "longitude" : coords.longitude,
-            "radius" : 0.5
-        }).then(
-            res=>{
-                let newArr = JSON.parse(JSON.stringify(res))
-                setBuildingList(newArr)
-            }
+        !isGeolocationAvailable ? (
+            console.log("Your browser does not support Geolocation")
+        ) : !isGeolocationEnabled ? (
+           console.log("Geolocation is not enabled")
+        ) : coords ? (
+            searchBuilding({
+                "latitude" : coords.latitude,
+                "longitude" : coords.longitude,
+                "radius" : 0.5
+            }).then(
+                res=>{
+                    let newArr = JSON.parse(JSON.stringify(res))
+                    setBuildingList(newArr)
+                }
+            )
+            
+        ) : (
+            console.log("Getting the location data&hellip")
         )
+        
     }
     return (
         <div className="App">
