@@ -20,20 +20,21 @@ function App() {
         })
     useEffect(() => {
         getBuildingList()
-
-    }, []);
+    }, [coords]);
     const getBuildingList = () => {
         !isGeolocationAvailable ? (
             console.log("Your browser does not support Geolocation")
         ) : !isGeolocationEnabled ? (
            console.log("Geolocation is not enabled")
         ) : coords ? (
+            // console.log(coords.latitude)
             searchBuilding({
                 "latitude" : coords.latitude,
                 "longitude" : coords.longitude,
                 "radius" : 0.5
             }).then(
                 res=>{
+                    console.log(res)
                     let newArr = JSON.parse(JSON.stringify(res))
                     setBuildingList(newArr)
                 }

@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // config
 const axiosOption = {
-    baseURL: 'http://169.234.26.190:8080/',
+    baseURL: 'http://localhost:8080/',
     timeout: 5000,
 }
 
@@ -11,13 +11,9 @@ const instance = axios.create(axiosOption);
 
 // add interceptor
 instance.interceptors.request.use(function (config) {
-    let token = localStorage.getItem('token')
-    if(token){
         config.headers = {
-            'token': token,
             'Content-type': 'application/json; charset=utf-8'
         }
-    }
     return config;
 }, function (error) {
     // do sth
