@@ -9,7 +9,8 @@ function Item({ building_id,
     building_lat,
     building_lng,
     distance,
-    walking_time
+    walking_time,
+    floors
 }) {
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
@@ -31,6 +32,10 @@ function Item({ building_id,
                 open={open}
                 // setOpen={setOpen}
                 closeModal={closeModal}
+                building_name={building_name}
+                distance={distance}
+                walking_time={walking_time}
+                floors = {floors}
             />
         </div>
     )
