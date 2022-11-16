@@ -14,7 +14,7 @@ function App() {
     const {coords, isGeolocationAvailable, isGeolocationEnabled} =
         useGeolocated({
             positionOptions: {
-                enableHighAccuracy: false,
+                enableHighAccuracy: true,
             },
             userDecisionTimeout: 5000,
         })
@@ -26,9 +26,9 @@ function App() {
             ) : !isGeolocationEnabled ? (
                console.log("Geolocation is not enabled")
             ) : coords ? (
-                fetch('http://192.168.0.188:8080/search?' + new URLSearchParams({
-                latitude: coords.latitude,
-                longitude: coords.longitude,
+                fetch('http://localhost:8080/search?' + new URLSearchParams({
+                user_latitude: coords.latitude,
+                user_longitude: coords.longitude,
                 radius: distance
                 }))
                 .then(res => res.json())
