@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import GoogleMapReact from "google-map-react";
-import markerIcon from "./markerIcon.png";
 import userIcon from "./userIcon.png";
 import { useGeolocated } from "react-geolocated";
-import ControlledPopup from "./ControlledPopup";
 import RestroomMarker from "./RestroomMarker"
+
 const UserMarker = ({ text }) => (
   <div>
     <div
@@ -76,7 +75,7 @@ function Map({ searchResult }) {
           <UserMarker
             lat={coords.latitude}
             lng={coords.longitude}
-            text="User"
+            text="YOU"
           />
         ) : (
           <div>Getting the location data&hellip; </div>
