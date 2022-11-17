@@ -23,7 +23,7 @@ function Item({ building_id,
                 <div className='item--info'>
                     <p className='item--text'>{walking_time}mins</p>
                     <MdLocationOn size='1.3em' />
-                    <p className='item--distance'>{distance}m</p>
+                    <p className='item--distance'>{distance}</p>
                 </div>
             </div>
 
