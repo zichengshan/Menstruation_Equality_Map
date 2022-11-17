@@ -36,7 +36,6 @@ function RestroomMarker({
               width: "80%",
             }}
           />
-          {text}
         </a>
       </div>
 
