@@ -1,29 +1,48 @@
-import React, { Component } from 'react'
-import { Button } from 'antd';
-import { DownloadOutlined } from '@ant-design/icons';
-import qrcode from './qrcode.png'
+import React, { useState, useEffect } from 'react';
+import { Button, Modal } from 'antd';
 import "./QrcodeGeneration.css"
+import { useLocation } from "react-router-dom";
 
-export default class QrcodeGeneration extends Component {
-  render() {
-    return (
-      <div className='position'>
-        <div className='Header'>
-          <h1 style={{
-            color: "white",
-            textAlign: "center"
-          }}>
-            QR Code Generation Page
-          </h1>
-        </div>
-        <a >
-          <img src={qrcode} className='qrcode--position' />
-        </a>
-        <br></br>
-        <Button type="primary" shape="round" icon={<DownloadOutlined />} size="large" href={qrcode} download="QR_Code.png">
-          Download
-        </Button>
-      </div>
-    )
+function QrcodeGeneration() {
+  const location = useLocation();
+
+  const [restroom, setRestroom] = useState([])
+  const [restroominfo, setRestroominfo] = useState([])
+  useEffect(() => {
+    const params = "building_name=" + location.state.building_name + "&floor_name=" + location.state.floor_name + "&restroom_id=" + location.state.restroom_id + "&restroom_num=" + location.state.restroom_num
+    setRestroom("http://localhost:8080/qrcode?" + params)
+    setRestroominfo(location.state.building_name + " -- " + location.state.floor_name + " floor -- " + location.state.restroom_num)
+  }, []);
+
+  const print = () => {
+    window.document.innerHTML = window.document.getElementById('content').innerHTML;
+    window.print();
+    window.location.reload();
   }
+
+  console.log(location.state)
+  return (
+    <div className='position'>
+      <div className='Header'>
+        <h1 style={{
+          color: "white",
+          textAlign: "center"
+        }}>
+          QR Code Generation Page
+        </h1>
+      </div>
+      <div id='content' >
+        <div className='info--position'>
+          {restroominfo}
+        </div>
+        <img src={restroom} className='qrcode--position' />
+      </div>
+      <br></br>
+      <Button type="primary" shape="round" size="large" onClick={() => print()}>
+        Print
+      </Button>
+    </div>
+  )
 }
+
+export default QrcodeGeneration;
