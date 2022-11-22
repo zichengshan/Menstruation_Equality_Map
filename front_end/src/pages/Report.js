@@ -1,13 +1,40 @@
-import React from "react";
-import { Button, Form, Input } from "antd";
+import React, { useState, useEffect } from "react";
+import { Button, Input } from "antd";
+import { reportEmpty } from "../request/api";
 import "./Report.css";
 const { TextArea } = Input;
 
 function Report() {
-  const onChange = (e) => {
-    console.log("Change:", e.target.value);
-  };
+  
+  const [restroomId, setRestroomId] = useState("0");
+  const [buildingName, setBuildingName] = useState("");
+  const [floorName, setfloorName] = useState("");
+  const [restroomNum, setRestroomNum] = useState("");
 
+  const submitReport = () => {
+    reportEmpty({
+      restroom_id :restroomId
+    }).then(
+      alert("Submitted Successfully!")
+    )
+  }
+  useEffect(() => {
+    setRestroomId(getQueryVariable("restroom_id"));
+    setRestroomNum(getQueryVariable("restroom_num"));
+    setfloorName(getQueryVariable("floor_name"));
+    setBuildingName(getQueryVariable("building_name"));
+  }, []);
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split("=");
+      if (pair[0] === variable) {
+        return pair[1];
+      }
+    }
+    return false;
+  }
   return (
     <div class="wrapall">
       <div className="Header">
@@ -21,22 +48,11 @@ function Report() {
         </h1>
       </div>
       <div style={{ textAlign: "center", marginTop: "10px" }}>
-        <TextArea
-          maxLength={400}
-          rows={7}
-          className="comments"
-          onChange={onChange}
-          placeholder="You can leave some comments here (max 400 characters)"
-          style={{
-            width: "60%",
-            resize: "horizontal",
-            // left:"10px"
-          }}
-        />
+        <span>{restroomNum} - floor: {floorName} - {buildingName}</span>
         <div>
           <span>If the product is empty, please click "submit"!</span>
         </div>
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit" onClick={submitReport}>
           Submit
         </Button>
       </div>
