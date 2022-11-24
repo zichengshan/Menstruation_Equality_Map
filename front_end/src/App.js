@@ -5,11 +5,15 @@ import Map from './components/Map'
 import Footer from './components/Footer'
 import Filter from './components/Filter'
 import React, {useState, useEffect} from 'react';
-import {useGeolocated} from "react-geolocated"
+import {useGeolocated} from 'react-geolocated'
+import Loading from './components/Loading'
+
 
 function App() {
     const [buildingList, setBuildingList] = useState([]) 
     const [distance, setDistance] = useState(0.1)
+    const [isLoading, setIsLoading] = useState(true)
+
 
     const {coords, isGeolocationAvailable, isGeolocationEnabled} =
         useGeolocated({
@@ -20,6 +24,12 @@ function App() {
         })
 
     useEffect(() => {
+
+        const helper = (data) => {
+            setBuildingList(data)
+            setIsLoading(false)
+        }
+
         const getBuildingList = () => {
             !isGeolocationAvailable ? (
                 console.log("Your browser does not support Geolocation")
@@ -32,7 +42,7 @@ function App() {
                 radius: distance
                 }))
                 .then(res => res.json())
-                .then (data => setBuildingList(data))
+                .then (data => helper(data))
                 
             ) : (
                 console.log("Getting the location data&hellip")
@@ -41,6 +51,21 @@ function App() {
 
         getBuildingList()
     }, [distance,coords]);
+
+    if (isLoading) {
+        return (
+            <div className="App" style={{
+                height: "100vh"
+            }}>
+                <Navbar/>
+                <Filter 
+                distance = {distance}
+                SetDistance = {setDistance}/>
+                <Loading />
+                <Footer/>
+            </div>
+        )
+    }
 
     return (
         <div className="App" style={{
@@ -56,7 +81,7 @@ function App() {
             </div>
             <Footer/>
         </div>
-    );
+    )
 }
 
 export default App;

@@ -1,9 +1,11 @@
 import React from "react"
+import logo from "../images/logo.png"
 
 function Navbar() {
     return (
         <div className="nav">
-            <h1 className="nav--title">Menstruation Equity Map ✨</h1>
+            <img className="nav--logo" src={logo} />
+            <h1 className="nav--title">Menstruation Products Map</h1>
         </div>
 
     )
