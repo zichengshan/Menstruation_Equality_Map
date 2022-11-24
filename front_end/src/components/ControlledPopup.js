@@ -20,7 +20,7 @@ const ControlledPopup = ({id, open, closeModal,building_name, distance, walking_
                     <BsBuilding size='2.5em'/>
                     <div className='pop--detail'>
                         <h3 className='pop--buildingName'>{building_name}</h3>
-                        <p className="pop--distance">{distance}m | {walking_time} mins walking</p>
+                        <p className="pop--distance">{distance} | {walking_time} mins walking</p>
                     </div>
                     <a className="pop--close" onClick={closeModal}> (X) </a>
                 </div>
