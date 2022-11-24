@@ -31,7 +31,7 @@ function QrcodeGeneration() {
           textAlign: "center",
           backgroundColor: "#0064a4"
         }}>
-          QR Code Generation Page
+          QR Code
         </h1>
       </div>
       <div id='content' >

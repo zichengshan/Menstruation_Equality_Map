@@ -6,7 +6,7 @@
     background-position: center;
     background-attachment: fixed;
     width: 350px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .qrcode--report {
@@ -16,4 +16,8 @@
 
 .Header {
     height: 7vh;
+}
+
+.info--position {
+    margin-top: 50px;
 }
