@@ -23,10 +23,13 @@ function QrcodeGeneration() {
   console.log(location.state)
   return (
     <div className='position'>
-      <div className='Header'>
+      <div className="Header" style={{
+        backgroundColor: "#0064a4"
+      }}>
         <h1 style={{
           color: "white",
-          textAlign: "center"
+          textAlign: "center",
+          backgroundColor: "#0064a4"
         }}>
           QR Code Generation Page
         </h1>

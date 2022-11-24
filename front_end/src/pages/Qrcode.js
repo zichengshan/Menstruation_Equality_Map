@@ -59,10 +59,13 @@ function Qrcode() {
 
     return (
         <div >
-            <div className='Header'>
+            <div className="Header" style={{
+                backgroundColor: "#0064a4"
+            }}>
                 <h1 style={{
                     color: "white",
-                    textAlign: "center"
+                    textAlign: "center",
+                    backgroundColor: "#0064a4"
                 }}>
                     Report Page
                 </h1>
