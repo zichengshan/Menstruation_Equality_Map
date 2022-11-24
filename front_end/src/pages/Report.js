@@ -12,11 +12,11 @@ function Report() {
   const [restroomNum, setRestroomNum] = useState("");
 
   const submitReport = () => {
-    reportEmpty({
-      restroom_id :restroomId
-    }).then(
-      alert("Submitted Successfully!")
-    )
+    fetch('http://localhost:8080/report-miss?' + new URLSearchParams({
+      restroom_id : parseInt(restroomId)
+                }))
+                .then(alert("Submitted Successfully!"))
+                
   }
   useEffect(() => {
     setRestroomId(getQueryVariable("restroom_id"));
