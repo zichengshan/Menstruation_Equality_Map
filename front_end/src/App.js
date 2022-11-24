@@ -43,7 +43,9 @@ function App() {
     }, [distance,coords]);
 
     return (
-        <div className="App">
+        <div className="App" style={{
+            height: "100vh"
+        }}>
             <Navbar/>
             <Filter 
                 distance = {distance}
