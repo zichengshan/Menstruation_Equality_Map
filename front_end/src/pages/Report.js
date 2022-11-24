@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Button, Input } from "antd";
-import { reportEmpty } from "../request/api";
+import { Button } from "antd";
 import "./Report.css";
-const { TextArea } = Input;
 
 function Report() {
   
@@ -37,22 +35,30 @@ function Report() {
   }
   return (
     <div class="wrapall">
-      <div className="Header">
+      <div className="Header" style={{
+          backgroundColor: "#0064a4"
+
+      }}>
         <h1
           style={{
             color: "white",
             textAlign: "center",
+            backgroundColor: "#0064a4"
           }}
         >
-          Report Page
+          Report Empty Menstruation Products Page
         </h1>
       </div>
-      <div style={{ textAlign: "center", marginTop: "10px" }}>
+      <div style={{ textAlign: "center", marginTop: "50px", fontSize: "20px"}}>
         <span>{restroomNum} - floor: {floorName} - {buildingName}</span>
         <div>
           <span>If the product is empty, please click "submit"!</span>
         </div>
-        <Button type="primary" htmlType="submit" onClick={submitReport}>
+        <Button type="primary" htmlType="submit" onClick={submitReport} style={{
+          marginTop: "30px",
+          width:"300px",
+          height:"40px"
+        }}>
           Submit
         </Button>
       </div>
