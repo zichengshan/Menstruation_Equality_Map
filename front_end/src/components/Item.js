@@ -21,9 +21,9 @@ function Item({ building_id,
             <div className='item--body'>
                 <h3 className='item--header'>{building_name}</h3>
                 <div className='item--info'>
-                    <p className='item--text'>{walking_time}mins</p>
                     <MdLocationOn size='1.3em' />
                     <p className='item--distance'>{distance}</p>
+                    <p className='item--text'>{walking_time}mins walking</p>
                 </div>
             </div>
 

@@ -72,9 +72,9 @@ function App() {
             height: "100vh"
         }}>
             <Navbar/>
-            <Filter 
-                distance = {distance}
-                SetDistance = {setDistance}/>
+                <Filter 
+                    distance = {distance}
+                    SetDistance = {setDistance}/>
             <div className='section'>
                 <Map searchResult={buildingList}/>
                 <List searchResult={buildingList}/>

@@ -67,7 +67,7 @@ function Qrcode() {
                     textAlign: "center",
                     backgroundColor: "#0064a4"
                 }}>
-                    QR Code Generate Page
+                    QR code generation page
                 </h1>
             </div>
             <Cascader size="large" className='Cascader'

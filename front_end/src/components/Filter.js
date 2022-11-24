@@ -26,6 +26,7 @@ function Filter(props) {
                 <option value="20">ALL</option>
         
             </select>
+            <p className='filter--description'>UCI menstrual product distribution map. Filter by distance and click to see more details.</p>     
          </div>
     
     )

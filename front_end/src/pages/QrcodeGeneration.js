@@ -20,7 +20,6 @@ function QrcodeGeneration() {
     window.location.reload();
   }
 
-  console.log(location.state)
   return (
     <div className='position'>
       <div className="Header" style={{
