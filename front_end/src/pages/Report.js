@@ -50,7 +50,7 @@ function Report() {
         </h1>
       </div>
       <div style={{ textAlign: "center", marginTop: "50px", fontSize: "20px"}}>
-        <span>{restroomNum} - floor: {floorName} - {buildingName}</span>
+        <span>{restroomNum?restroomNum.replaceAll("_"," "):restroomNum} - floor: {floorName} - {buildingName?buildingName.replaceAll("_"," "):buildingName}</span>
         <div>
           <span>If the product is empty, please click "submit"!</span>
         </div>
