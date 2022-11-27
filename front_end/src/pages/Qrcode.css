@@ -1,32 +1,31 @@
-.text--generation {
-    margin-left: 100px !important;
+.button {
+    margin-left: 50px !important;
     text-align: center;
     position: relative;
-    left: 10%;
+    left: 23%;
     margin-top: 40px;
 }
 
 .Cascader {
     margin-top: 100px;
-    width: 400px !important;
+    width: 300px !important;
     text-align: center;
-    position: relative;
-    left: 5%;
-
+    left: 20%;
 }
 
 .Header {
     height: 7vh;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     .Cascader {
+        margin-left: 70px;
         left: 30%;
     }
 
-    .text--generation {
-        left: 30%;
-
+    .button {
+        left: 35%;
+        margin-left: auto;
     }
 
 }

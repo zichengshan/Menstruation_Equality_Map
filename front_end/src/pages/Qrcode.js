@@ -28,7 +28,6 @@ function Qrcode() {
                         for (let k = 0; k < newArr[i].floors[j].restrooms.length; k++) {
                             const roomInfo = { building_name: newArr[i].name, floor_name: newArr[i].floors[j].name, restroom_id: newArr[i].floors[j].restrooms[k].restroomId, restroom_num: newArr[i].floors[j].restrooms[k].roomNum }
                             children2[k] = { value: roomInfo, label: newArr[i].floors[j].restrooms[k].roomNum }
-                            console.log(roomInfo)
                         }
                     }
                 }
@@ -45,20 +44,17 @@ function Qrcode() {
 
 
     const onChange = (value) => {
-        console.log(value[2]);
-        console.log(value)
         setRestroomId(value[2]);
     };
 
     const generateQrCode = (value) => {
-        console.log(roomInfo)
         navigate("/qrcode/qrcodegeneration", { state: roomInfo })
     }
 
     const displayRender = (labels) => labels[labels.length - 1];
 
     return (
-        <div >
+        <div className='Item'>
             <div className="Header" style={{
                 backgroundColor: "#0064a4"
             }}>
@@ -81,6 +77,7 @@ function Qrcode() {
                     Generate QR Code
                 </Button>
             </span>
+
 
         </div>
     );
