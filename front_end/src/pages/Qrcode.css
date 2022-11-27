@@ -2,7 +2,7 @@
     margin-left: 100px !important;
     text-align: center;
     position: relative;
-    left: 30%;
+    left: 10%;
 }
 
 .Cascader {
@@ -10,10 +10,21 @@
     width: 400px !important;
     text-align: center;
     position: relative;
-    left: 30%;
+    left: 5%;
+
 }
 
 .Header {
-
     height: 7vh;
+}
+
+@media only screen and (min-width: 600px) {
+    .Cascader {
+        left: 30%;
+    }
+
+    .text--generation {
+        left: 30%;
+    }
+
 }
