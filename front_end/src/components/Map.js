@@ -63,7 +63,7 @@ function Map({ searchResult }) {
 
     <div className="map">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
+        bootstrapURLKeys={{ key: "AIzaSyDL0gcQf5NFWRFZdXgUtatPoOxE5JaxdJY" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
