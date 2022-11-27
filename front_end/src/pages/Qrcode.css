@@ -10,7 +10,10 @@
     margin-top: 100px;
     width: 300px !important;
     text-align: center;
+    /* position: relative; */
     left: 20%;
+
+
 }
 
 .Header {
@@ -26,6 +29,8 @@
     .button {
         left: 35%;
         margin-left: auto;
+        /* background-color: red; */
+
     }
 
 }

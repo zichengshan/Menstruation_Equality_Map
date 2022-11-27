@@ -73,7 +73,7 @@ function Qrcode() {
                 onChange={onChange}
             />
             <span>
-                <Button type="primary" size="large" className='text--generation' onClick={generateQrCode}>
+                <Button type="primary" size="large" className='button' onClick={generateQrCode}>
                     Generate QR Code
                 </Button>
             </span>
