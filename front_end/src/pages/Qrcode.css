@@ -3,6 +3,7 @@
     text-align: center;
     position: relative;
     left: 10%;
+    margin-top: 40px;
 }
 
 .Cascader {
@@ -25,6 +26,7 @@
 
     .text--generation {
         left: 30%;
+
     }
 
 }
