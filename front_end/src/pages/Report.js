@@ -52,7 +52,7 @@ function Report() {
       <div style={{ textAlign: "center", marginTop: "50px", fontSize: "20px"}}>
         <span>{restroomNum?restroomNum.replaceAll("_"," "):restroomNum} - floor: {floorName} - {buildingName?buildingName.replaceAll("_"," "):buildingName}</span>
         <div>
-          <span>If the product is empty, please click "submit"!</span>
+          <span className="report--span">If the product is empty, please click "submit"!</span>
         </div>
         <Button type="primary" htmlType="submit" onClick={submitReport} style={{
           marginTop: "30px",

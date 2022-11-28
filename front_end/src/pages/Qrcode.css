@@ -1,36 +1,33 @@
-.button {
-    margin-left: 50px !important;
+.qr--body {
     text-align: center;
-    position: relative;
-    left: 23%;
-    margin-top: 40px;
+    margin-top: 5%;
 }
 
-.Cascader {
-    margin-top: 100px;
-    width: 300px !important;
-    text-align: center;
-    /* position: relative; */
-    left: 20%;
-
-
+.qr--Cascader {
+    width: 300px;
 }
 
-.Header {
-    height: 7vh;
+.qr--button {
+    margin-left: 8%;
 }
 
-@media only screen and (min-width: 800px) {
-    .Cascader {
-        margin-left: 70px;
-        left: 30%;
+@media only screen and (max-width: 800px) {
+    .qr--body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .button {
-        left: 35%;
+    .qr--button {
+        margin-top: 20px;
         margin-left: auto;
-        /* background-color: red; */
-
+        margin-right: auto;
     }
 
+    .qr--Cascader {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        width: 60%;
+    }
 }

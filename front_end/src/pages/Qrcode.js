@@ -54,8 +54,8 @@ function Qrcode() {
     const displayRender = (labels) => labels[labels.length - 1];
 
     return (
-        <div className='Item'>
-            <div className="Header" style={{
+        <div>
+            <div style={{
                 backgroundColor: "#0064a4"
             }}>
                 <h1 style={{
@@ -66,19 +66,17 @@ function Qrcode() {
                     QR code generation page
                 </h1>
             </div>
-            <Cascader size="large" className='Cascader'
-                options={buildingList}
-                expandTrigger="hover"
-                displayRender={displayRender}
-                onChange={onChange}
-            />
-            <span>
-                <Button type="primary" size="large" className='button' onClick={generateQrCode}>
+            <div className='qr--body'>
+                <Cascader size="large" className='qr--Cascader'
+                    options={buildingList}
+                    expandTrigger="hover"
+                    displayRender={displayRender}
+                    onChange={onChange}
+                />
+                <Button type="primary" size="large" className='qr--button' onClick={generateQrCode}>
                     Generate QR Code
                 </Button>
-            </span>
-
-
+            </div>
         </div>
     );
 };
