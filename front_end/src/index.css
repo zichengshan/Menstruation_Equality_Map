@@ -4,7 +4,7 @@
 
 body {
     margin: 10px 5px 0px 10px;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     background-color: white
 }
 
@@ -15,7 +15,7 @@ h1, h2, h3, h4 {
 
 p {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
 }
 
 .react-icons {
@@ -134,7 +134,7 @@ p {
 
 .map {
     /* width: 100%; */
-    height: 56vh;
+    height: 58vh;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -144,8 +144,16 @@ p {
 */
 
 .footer {
-    position: absolute;
-    right: 50px;
+    width: 100%;
+    height: auto;
+    background-color: #F0F2F5;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: small;
 }
 
 @media only screen and (min-width: 800px) {
@@ -173,15 +181,25 @@ p {
 
     }
 
-
     .map {
-        margin: 10px 5px;
+        margin: 12px 5px 0;
         width: 100%;
-        height: 80vh;
+        height: 81vh;
     }
 
     .list {
         width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+        height: 6vh;
+    }
+
+    .footer p {
+       text-align: right;
+       padding-right: 10px;
+       padding-top: 4px;
     }
 }
 
