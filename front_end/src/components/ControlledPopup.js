@@ -9,7 +9,7 @@ const ControlledPopup = ({id, open, closeModal,building_name, distance, walking_
         return <div className='pop--floor'>
             <br/>
             <h2 className='pop--floorName'>Floor {floor.name}</h2>
-            <p className='pop--available'><b>{floor.validRoomNum}</b> restrooms menstruation products available</p>
+            <p className='pop--available'><b>{floor.validRoomNum}</b> restroom(s) menstruation products available</p>
         </div>
     })
 
