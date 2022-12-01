@@ -10,7 +10,7 @@ function Report() {
   const [restroomNum, setRestroomNum] = useState("");
 
   const submitReport = () => {
-    fetch('http://169.234.1.8:8080/report-miss?' + new URLSearchParams({
+    fetch('http://ec2-54-214-227-92.us-west-2.compute.amazonaws.com:8080/report-miss?' + new URLSearchParams({
       restroom_id : parseInt(restroomId)
                 }))
                 .then(res => res.json())

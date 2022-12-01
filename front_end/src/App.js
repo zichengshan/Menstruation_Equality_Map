@@ -36,7 +36,7 @@ function App() {
             ) : !isGeolocationEnabled ? (
                console.log("Geolocation is not enabled")
             ) : coords ? (
-                fetch('http://localhost:8080/search?' + new URLSearchParams({
+                fetch('http://ec2-54-214-227-92.us-west-2.compute.amazonaws.com:8080/search?' + new URLSearchParams({
                 user_latitude: coords.latitude,
                 user_longitude: coords.longitude,
                 radius: distance

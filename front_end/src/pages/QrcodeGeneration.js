@@ -10,7 +10,7 @@ function QrcodeGeneration() {
   const [restroominfo, setRestroominfo] = useState([])
   useEffect(() => {
     const params = "building_name=" + location.state.building_name + "&floor_name=" + location.state.floor_name + "&restroom_id=" + location.state.restroom_id + "&restroom_num=" + location.state.restroom_num
-    setRestroom("http://localhost:8080/qrcode?" + params)
+    setRestroom("http://ec2-54-214-227-92.us-west-2.compute.amazonaws.com:8080/qrcode?" + params)
     setRestroominfo(location.state.building_name + " -- " + location.state.floor_name + " floor -- " + location.state.restroom_num)
   }, []);
 

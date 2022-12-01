@@ -1,7 +1,6 @@
 import { Cascader, Button } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import { Navigate, NavLink } from 'react-router-dom';
 import 'antd/dist/antd.css'
 import "./Qrcode.css"
 import { selectBuilding } from '../request/api';
@@ -32,8 +31,6 @@ function Qrcode() {
                     }
                 }
                 setBuildingList(options);
-
-
             }
         )
     }
