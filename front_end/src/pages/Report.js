@@ -10,10 +10,12 @@ function Report() {
   const [restroomNum, setRestroomNum] = useState("");
 
   const submitReport = () => {
-    fetch('http://localhost:8080/report-miss?' + new URLSearchParams({
+    fetch('http://169.234.1.8:8080/report-miss?' + new URLSearchParams({
       restroom_id : parseInt(restroomId)
                 }))
-                .then(alert("Submitted Successfully!"))
+                .then(res => res.json())
+                .then (data => alert(data.message))
+                
                 
   }
   useEffect(() => {
