@@ -52,6 +52,10 @@ React - Ant Design of React, Google Map API
 ## Status
 Completed
 
+## Others
+For other information about backend, please go to this link: https://github.com/yx-hh/Menstruation_Equity_Map_Backend
+
+
 ## Credits
 List of contributers:
 - [Zicheng Shan](https://www.linkedin.com/in/zichengs/)
