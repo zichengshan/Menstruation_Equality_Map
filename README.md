@@ -15,7 +15,7 @@ Show information about menstrual products and building locations on an interacti
 Shortage report: users can use our website to report the shortage of products so that facilities can know they need to refill products.
 
 ## Screenshot
-![](../../../../../../var/folders/ht/rr4_2htj1fv0t_61wrg1wyfh0000gn/T/TemporaryItems/NSIRD_screencaptureui_7zttGP/Screenshot 2022-12-05 at 10.53.59 PM.png)
+
 
 ## Technologies Used
 React - Ant Design of React, Google Map API
