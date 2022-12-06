@@ -15,6 +15,7 @@ Show information about menstrual products and building locations on an interacti
 Shortage report: users can use our website to report the shortage of products so that facilities can know they need to refill products.
 
 ## Screenshot
+<img width="1436" alt="Screenshot 2022-12-05 at 10 56 40 PM" src="https://user-images.githubusercontent.com/61951792/205842720-bdbbce27-2e0b-4d1c-a060-1dfba7c1c34d.png">
 
 
 ## Technologies Used
